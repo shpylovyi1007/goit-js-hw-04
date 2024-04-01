@@ -1,16 +1,17 @@
 function isEnoughCapacity(products, containerSize) {
-    const product = Object.values(products);
+    const quantities = Object.values(products);
     let sum = 0;
 
-    for (let i = 0; i < product.length; i++) {
-        sum += product[i];
+    for (let i = 0; i < quantities.length; i++) {
+        sum += quantities[i];
     }
 
     if (sum <= containerSize) {
         return true;
-    } else {
-        return false;
     }
+
+    return false;
+
 }
 
 console.log(
